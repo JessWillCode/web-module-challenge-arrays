@@ -145,11 +145,18 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
+/*removing exact match, loop through array and check every index for exact match- if it exists then remove it and splice it- return array outside loop*/
+
 function removeFlavorByName(array, string){
-  /*removing exact match, loop through array and check every index for exact match- if it exists then remove it and splice it- return array outside loop*/
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === string){
+      array.splice(array[i],1);
+    }
+  }
+  return array;
 }
 
-
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
